@@ -9,6 +9,15 @@
   #farmersMarketMenu {
     scroll-behavior: smooth;
   }
+  .max-h-0 {
+    max-height: 0;
+  }
+  @screen md {
+    .desktop-cols {
+      columns: 2;
+      column-gap: 40px;
+    }
+  }
 
   /**
  * Smooth scrolling on the whole document

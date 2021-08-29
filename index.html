@@ -19,16 +19,19 @@
           x-cloak
           x-show="modalOpen"
           class="fixed flex items-center justify-center w-screen h-screen bg-gray-900 bg-opacity-75 z-10001">
-          <div class="relative flex flex-col items-center justify-end p-4 bg-white shadow-2xl w-72 rounded-2xl"  @click.away="modalOpen = false">
-            <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/ff7a204f106015ad2d930d11871eb45ef6c4d3f2/original.png" alt="Turkey Deposit" onerror="this.style.display='none'" class="w-full h-auto">
+          <div class="relative flex flex-col items-center justify-end p-4 bg-white shadow-2xl w-[400px] rounded-2xl"  @click.away="modalOpen = false">
+            <div class="w-full aspect-w-3 aspect-h-2">
+              <img src="https://items-images-production.s3.us-west-2.amazonaws.com/files/ff7a204f106015ad2d930d11871eb45ef6c4d3f2/original.png" alt="Turkey Deposit" onerror="this.style.display='none'" class="object-cover">
+            </div>
             <div class="py-5">
               <p class="mb-2 text-xl text-center">Turkey Deposit</p>
               <p class="mb-4 text-base text-center">$20.00</p>
-             <div class="rounded-full shadow">
+             <div class="mb-4 rounded-full shadow">
                 <a target="_blank" href="https://checkout.square.site/merchant/CKRWXGC4T9MMP/checkout/55T7BWU4XE5AKFMLAEC4ZRWE?src=embed" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-green-800 border border-transparent rounded-full hover:bg-green-700 md:py-4 md:text-lg md:px-10">
                   Make Deposit
                 </a>
               </div>
+              <p class="mb-0 text-xs text-center">Weights are not guaranteed and prices are subject to change! By reserving now you are acknowledging that you understand specific turkey weights may not be available. We will do the best we can but its based on a first come first serve basis.</p>
             </div>
           </div>
         </div>
@@ -44,7 +47,7 @@
           }
         </script>
         <div class="mx-auto max-w-7xl">
-          <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+          <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-8 lg:max-w-2xl lg:w-full lg:pb-8 xl:pb-8">
             <svg class="absolute inset-y-0 right-0 hidden w-48 h-full text-white transform translate-x-1/2 lg:block" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
               <polygon points="50,0 100,0 50,100 0,100" />
             </svg>
@@ -76,7 +79,7 @@
                 <p class="mt-3 text-2xl text-green-800">
                   <strong>$3.59 per pound</strong> (Approx weight is 12-28lbs)
                 </p>
-                <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                <div class="mt-5 mb-12 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div class="rounded-full shadow">
                     <button @click="toggleModal()" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-green-800 border border-transparent rounded-full hover:bg-green-700 md:py-4 md:text-lg md:px-10">
                       Reserve Now!
@@ -88,10 +91,22 @@
                     </a>
                   </div>
                 </div>
+                <div class="max-w-[80%]">
+                  <h2 class="mb-1 text-xl font-bold tracking-tight text-gray-700">Turkey Pickup Information</h2>
+                  <p class="mb-4 text-sm text-gray-700">
+                    <strong>November 22-24 8am - 6pm</strong><br>
+                    NEW PICKUP LOCATION  - CURBSIDE PICKUP<br>
+                    2063 Shaffer Rd. Mogadore, OH 44260 - <i>Please Follow Signs</i><br>
+                    Cash, Checks and Credit Cards accepted.<br>
+                    Thanksgiving Turkey Contact Info:<br>
+                    Stacy Kisamore - 330-354-4157 (Mon-Sat: 8am-6pm)
+                  </p>
+                </div>
               </div>
             </main>
           </div>
         </div>
+
         <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
           <img class="object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full" src="./assets/turkey.jpg" alt="">
         </div>
@@ -122,124 +137,357 @@
       </section>
 
 
-      <section id="farmersMarketMenu" class="relative overflow-hidden">
+      <section id="farmersMarketMenu" class="relative overflow-hidden text-white">
         <div class="absolute w-full h-full bg-black">
-          <img class="object-cover object-center w-full h-full opacity-[0.15]" src="./assets/chalkboard.jpg" alt="">
+          <img class="object-cover object-center w-full h-full opacity-[0.15] -z-1" src="./assets/chalkboard.jpg" alt="">
         </div>
-        <h2 class="relative mt-20 mb-16 text-5xl text-center text-white lg:text-7xl font-fancy z-1">Farmers Market Offerings</h2>
-        <div class="container relative grid max-w-6xl grid-cols-3 gap-8 mb-16 md:grid-cols-6 z-1">
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-          <p class="text-4xl text-white font-fancy">Eggs</p>
-        </div>
-      </section>
+        <div class="container relative px-4 py-20 mx-auto z-1">
+          <div class="max-w-2xl mx-auto mb-12 text-center">
+            <span class="text-sm text-white uppercase">Kent Haymakers Farmers Market</span>
+            <h2 class="mt-2 mb-4 text-4xl font-bold text-white lg:text-5xl font-heading">Products & Pricing</h2>
+            <p class="text-lg leading-loose text-white">Saturdays Year Round! All prices subject to change. Location info below.</p>
+          </div>
 
-      <section class="bg-green-100 bg-opacity-60">
-        <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8">
-          <div class="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
-            <div>
-              <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">
-                Contact Info
-              </h2>
-              <div class="mt-3">
-                <p class="text-lg text-gray-500">
-                  If you have any questions or special request don't hesitate to reach out.
+          <div class="max-w-2xl mx-auto">
+
+            <!-- EGGS -->
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Eggs</h3>
+            <div class="py-2 mt-3 mb-8">
+              <div class="text-lg">
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Fresh Free Range Eggs</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$4/Dozen</span>
+                </p>
+                <p class="mb-2 text-base">Can be purchased at Haymakers Farmers Market, Duma Meats and Pegasus Country Store.</p>
+              </div>
+            </div>
+
+            <!-- BEEF -->
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Beef</h3>
+            <div class="py-2 mt-3 mb-8">
+              <h5 class="text-xl font-bold font-heading">Beef Sides <span class="text-base font-light"> - call 330.354.1099 to order</span></h5>
+              <p class="flex items-baseline justify-between text-lg">
+                <span>Half or Whole</span>
+                <span class="flex-grow border-dotted border-b-1"></span>
+                <span>$3/lb hanging weight</span>
+              </p>
+              <p class="text-sm text-right">(+ processing fees)</p>
+
+              <h5 class="text-xl font-bold font-heading">Cuts</h5>
+              <div class="text-lg desktop-cols">
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Ground Beef</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.50/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Patties</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2 text-red-500">
+                  <span>Sugar Patties</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Sirloin</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$15/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Porterhouse</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$15/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>T-Bone</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$15/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Ribsteak</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$15/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Flank Steak</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$13/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Skirt</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$13/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Short Ribs</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$6/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Chuck Roast</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Pot Roast</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Brisket</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$8/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Stew Meat</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$9/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Kebob Meat</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$12/lb</span>
                 </p>
               </div>
-              <div class="mt-9">
-                <div class="flex">
-                  <div class="flex-shrink-0">
-                    <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                  </div>
-                  <div class="ml-3 text-base text-gray-500">
-                    <p>
-                      +1 (555) 123 4567
-                    </p>
-                    <p class="mt-1">
-                      Mon-Fri 8am to 6pm
-                    </p>
-                  </div>
+            </div>
+
+
+            <!-- TURKEY -->
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Turkey</h3>
+            <div class="py-2 mt-3 mb-8">
+              <div class="text-lg desktop-cols">
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between">
+                    <span>Whole Thanksgiving</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$3.79/lb</span>
+                  </p>
+                  <p class="text-sm text-right">(Price subject to change)</p>
                 </div>
-                <div class="flex mt-6">
-                  <div class="flex-shrink-0">
-                    <svg class="w-6 h-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div class="ml-3 text-base text-gray-500">
-                    <p>
-                      support@email.com
-                    </p>
-                  </div>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Boneless Skinless Breast</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Wings</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Drumsticks</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Ground</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7.99/lb</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- CHICKEN -->
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Chicken</h3>
+            <div class="py-2 mt-3 mb-8">
+              <div class="text-lg desktop-cols">
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Whole</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$3.50/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Boneless Skinless Breast</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$9.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Thighs</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Wings</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Drumbsticks</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$5.99/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Ground</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7.99/lb</span>
+                </p>
+              </div>
+            </div>
+
+
+            <!-- PORK -->
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Pork</h3>
+            <div class="py-2 mt-3 mb-8">
+              <h5 class="text-xl font-bold font-heading">Pork Sides <span class="text-base font-light"></span></h5>
+              <p class="flex items-baseline justify-between text-lg">
+                <span>Half or Whole</span>
+                <span class="flex-grow border-dotted border-b-1"></span>
+                <span>$2.25/lb hanging weight</span>
+              </p>
+              <p class="mb-2 text-sm text-right">(+ processing fees)</p>
+
+              <div class="text-lg desktop-cols">
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Bacon</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$11/lb</span>
+                </p>
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between">
+                    <span>Breakfast Links</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$6.50/lb</span>
+                  </p>
+                  <p class="text-sm">Regular | Maple | Blueberry Maple</p>
+                </div>
+                <p class="flex items-baseline justify-between mb-2 text-red-500">
+                  <span>Sausage Patties</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$/lb</span>
+                </p>
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between text-red-500">
+                    <span>Rodeo Patties</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$/lb</span>
+                  </p>
+                  <p class="text-sm">(Sausage, onion, green pepper)</p>
+                </div>
+                <p class="flex items-baseline justify-between mb-2 ">
+                  <span>Spareribs</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2 ">
+                  <span>Pork Chops</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2 ">
+                  <span>Ham Slices</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2 ">
+                  <span>Boston Roast</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$7/lb</span>
+                </p>
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between">
+                    <span>Brats</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$7/lb</span>
+                  </p>
+                  <p class="text-sm">Philly Cheese Steak | Pineapple Teriyaki | Mac & Cheese | Stadium</p>
+                </div>
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between">
+                    <span>Italian Links</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$6.50/lb</span>
+                  </p>
+                  <p class="text-sm">Sweet | Hot</p>
+                </div>
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between">
+                    <span>Bulk Italian Links</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$6.50/lb</span>
+                  </p>
+                  <p class="text-sm">Sweet | Hot | Buffalo Wing Flavored</p>
                 </div>
               </div>
             </div>
-            <div class="mt-12 sm:mt-16 md:mt-0">
-              <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">
-                Farmers Market Info
-              </h2>
-              <div class="mt-3">
-                <p class="text-lg text-gray-500">
-                  Some information on the farmers market.
+
+            <!-- LAMB -->
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Lamb</h3>
+            <div class="py-2 mt-3 mb-8">
+              <div class="text-lg desktop-cols">
+                <div class="mb-2">
+                  <p class="flex items-baseline justify-between">
+                    <span>Whole</span>
+                    <span class="flex-grow border-dotted border-b-1"></span>
+                    <span>$5.50/lb hanging weight</span>
+                  </p>
+                  <p class="text-sm text-right">(+ processing fees)</p>
+                </div>
+
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Ground</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$10/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2 text-red-500">
+                  <span>Stew Meat</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2 text-red-500">
+                  <span>Kebob Meat</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Shanks</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$9/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Rib Chops</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$18/lb</span>
+                </p>
+                <p class="flex items-baseline justify-between mb-2">
+                  <span>Loin Chops</span>
+                  <span class="flex-grow border-dotted border-b-1"></span>
+                  <span>$18/lb</span>
                 </p>
               </div>
-              <div class="mt-9">
-                <div class="flex">
-                  <div class="text-base text-gray-500">
-                    <p class="mt-1">
-                      1234 Some Address, Hartville OH, 44444
-                    </p>
-                    <p class="mt-1">
-                      Mon-Fri 8am to 6pm
-                    </p>
-                  </div>
-                </div>
-              </div>
+            </div>
+
+
+            <h3 class="pb-2 text-3xl font-bold text-white border-white border-dashed lg:text-5xl font-heading border-b-1">Farmers Market Location Info</h3>
+            <div class="py-2 mt-3 mb-8">
+              <p class="mb-3 text-lg text-white">
+                <strong class="text-xl">Outdoor Season</strong><br>
+                Saturdays 9am - 1am (April - November)<br>
+                Franklin Ave. Under Haymakers Overpass
+              </p>
+              <p class="mb-3 text-lg text-white">
+                <strong class="text-xl">Indoor Season</strong><br>
+                Saturdays 10am - 1om (December - March)<br>
+                United Methodist Church 1435 E Main St, Kent, OH 44240.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
+
       <!-- Footer -->
       <footer class="px-4 pt-10 pb-8 bg-green-900">
         <div class="mb-6 text-3xl text-center text-white font-fancy">Mason Kisamore Family Farms</div>
+        <div class="mb-6 text-center">
+          <div class="text-base font-light text-white">
+            <p> 2063 Shaffer Rd. Mogadore, OH 44260</p>
+            <p>(330) 354 1099</p>
+            <p>Mon-Sat 8am to 6pm</p>
+          </div>
+        </div>
         <div class="mx-auto max-w-7xl sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
           <div class="flex justify-center space-x-6 md:order-2">
             <a href="https://www.facebook.com/Mason-Kisamore-Family-Farms-LLC-522418491239108/" target="_blank" class="text-white hover:text-green-300">
@@ -257,9 +505,9 @@
             </a>
           </div>
           <div class="mt-8 md:mt-0 md:order-1">
-        <p class="text-xs text-white">
-          &copy; 2021 Mason Kisamore Family Farms LLC. All rights reserved.
-        </p>
+            <p class="text-xs text-white">
+              &copy; 2021 Mason Kisamore Family Farms LLC. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
