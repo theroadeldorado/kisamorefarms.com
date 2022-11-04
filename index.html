@@ -106,16 +106,20 @@
                   <strong>$3.99 per pound</strong> (Approx weight is 12-28lbs)
                 </p>
                 <div class="gap-3 mt-5 mb-12 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                  <div x-show="!hasTurkeys" class="rounded-full shadow">
+                    <a  href="#pickup-information" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-green-800 border border-transparent rounded-full hover:bg-green-700 md:py-4 md:text-lg md:px-10">
+                      pickup-information
+                    </a>
+                  </div>
                   <div x-show="hasTurkeys" class="rounded-full shadow">
-                    <button   @click="toggleModal()" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-green-800 border border-transparent rounded-full hover:bg-green-700 md:py-4 md:text-lg md:px-10">
+                    <button  @click="toggleModal()" class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-white bg-green-800 border border-transparent rounded-full hover:bg-green-700 md:py-4 md:text-lg md:px-10">
                       Reserve Now!
                     </button>
                   </div>
                   <div class="mt-3 rounded-full shadow sm:mt-0">
                     <a
                       href="#farmersMarketMenu"
-                      :class="hasTurkeys ? 'text-green-800 bg-green-100 hover:bg-green-400' : 'text-white hover:bg-green-700 bg-green-800'"
-                      class="flex items-center justify-center w-full px-8 py-3 text-base font-medium border border-transparent rounded-full md:py-4 md:text-lg md:px-10">
+                      class="flex items-center justify-center w-full px-8 py-3 text-base font-medium text-green-800 bg-green-100 border border-transparent rounded-full md:py-4 md:text-lg md:px-10 hover:bg-green-400">
                       Farmers Market Offerings
                     </a>
                   </div>
@@ -130,7 +134,7 @@
         </div>
       </div>
 
-      <section id="pickup-information">
+      <section id="pickup-information" class="scroll-mt-10">
         <div class="max-w-[700px] container text-center mt-10 mb-6">
           <h2 class="mb-1 text-4xl font-bold tracking-tight text-gray-700">Turkey Pickup Information</h2>
           <p class="mt-3 text-base text-gray-700 sm:mt-5 md:mt-5">No appointments are necessary after placing a reservation.</p>
